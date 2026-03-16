@@ -1,5 +1,5 @@
 # Use a lightweight base image with OpenJDK 8
-FROM openjdk:8u151-jdk-alpine3.7
+FROM eclipse-temurin:8-jdk-alpine
 
 # Set a non-root user for running the application
 RUN adduser -D imagebuilder
@@ -9,10 +9,10 @@ USER imagebuilder
 EXPOSE 8070
 
 # Copy the JAR file to the /usr/app directory
-COPY target/shopping-cart*.jar /usr/app/
+COPY target/shopping-cart*.jar /app/app.jar
 
 # Set the working directory to /usr/app
-WORKDIR /usr/app
+WORKDIR /app
 
 # Run the application using a non-root user
-CMD ["java", "-jar", "shopping-cart*.jar"]
+CMD ["java", "-jar", "app.jar"]
