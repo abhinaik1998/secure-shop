@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Jenkins Pipeline for SecureShop Java App with Maven, Git, Trivy, SonarQube, Kubernetes, Nexus, ECR, Amazon EKS
 ![Secure Shop Pipeline](images/SecureShop.svg)
@@ -306,3 +307,7 @@ Create a Jenkinsfile in your project repository with the following stages:
 ## Conclusion
 
 This project demonstrates proficiency in DevOps practices, tools, and technologies, including Jenkins, Maven, Git, Trivy, OWASP Dependency Check, SonarQube, Kubernetes, GitHub, Nexus Artifact Repository, and Amazon ECR. It showcases the ability to implement a complete CI/CD pipeline for a Java application, ensuring automation, security, quality, and efficient deployment.
+=======
+# secure-shop
+Complete CI CD pipe for the java app
+>>>>>>> 29c63b233b180c738962896b127cf9e412e1ce2b
