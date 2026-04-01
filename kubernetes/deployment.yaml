@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: $APP_NAME
-  name: $APP_NAME
-  namespace: secureapp
+    app: secure-shop
+  name: secure-shop
+  namespace: secure-shop
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: $APP_NAME
+      app: secure-shop
   template:
     metadata:
       labels:
-        app: $APP_NAME
+        app: secure-shop
     spec:
       containers:
-      - image: $IMAGE_REPO:$IMAGE_NAME
+      - image: nykiee/my-private-repo
         imagePullPolicy: Always
-        name: $APP_NAME
+        name: secure-shop
         ports:
         - containerPort: 8070
       imagePullSecrets:
-      - name: ecr-secret-registry-key
+      - name: my-registry-key
