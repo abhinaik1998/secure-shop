@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: secure-shop
-  name: secure-shop-autodeloy
+  name: secure-shop-autodeloy1
   namespace: secure-shop
 spec:
   replicas: 2
